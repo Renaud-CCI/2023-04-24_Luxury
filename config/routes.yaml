@@ -3,3 +3,7 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+app_candidate_new:
+    path: /candidates/new/{id}
+    controller: App\Controller\CandidateController::new

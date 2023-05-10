@@ -1,0 +1,47 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Candidate index{% endblock %}
+
+{% block body %}
+<div style="height:100px"></div>
+    <h1>Candidate index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Current Location</th>
+                <th>Job Category</th>
+                <th>Availability</th>
+                <th>Inscription Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for candidate in candidates %}
+            <tr>
+                <td>{{ candidate.firstname }}</td>
+                <td>{{ candidate.lastname }}</td>
+                <td><a href="mailto:{{ candidate.user.email }}">{{ candidate.user.email }}</a></td>
+                <td>{{ candidate.currentLocation }}</td>
+                <td>{{ candidate.jobCategoryId ? candidate.jobCategoryId.name : '' }}</td>
+                <td>{{ candidate.availability ? 'yes' : 'no' }}</td>
+                <td>{{ candidate.createdAt|date('Y-m-d') }}</td>          
+                <td>
+                    <a href="{{ path('app_candidate_show', {'id': candidate.user.id}) }}">show</a>
+                    <a href="{{ path('app_candidate_new', {'id': candidate.user.id}) }}">edit</a>
+                    <form method="post" action="{{ path('app_candidate_delete', {'id': candidate.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ candidate.id) }}">
+                        <button class="btn">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="23">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

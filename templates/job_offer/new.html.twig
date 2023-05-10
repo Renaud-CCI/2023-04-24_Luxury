@@ -1,0 +1,40 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}New JobOffer{% endblock %}
+
+{% block body %}
+<div style="height:100px"></div>
+<h1>{{ job_offer.id ? 'Update' : 'Create new' }} JobOffer</h1>
+
+<form action="#" method="post">
+	<input type="hidden" name="_token" value="">
+
+	<div class="input-field">
+		<input type="text" name="title" value="{{ job_offer.getTitle() ? job_offer.getTitle() : '' }}">
+		<label for="title">Title</label>
+		<span class="help-block">Insert the title of the offer</span>
+	</div>
+
+	<div class="input-field">
+		<select name="type" id="type">
+			<option value="full_time">Full Time</option>
+			<option value="part_time">Part Time</option>
+			<option value="temporary">Temporary</option>
+			<option value="freelance">Freelance</option>
+			<option value="seasonal">Seasonal</option>
+		</select>
+		<label for="type">Type</label>
+		<span class="help-block">Insert the type of the offer</span>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-4">
+			<button type="submit" class="btn btn-block btn-lg gradient secondary waves-effect waves-light">
+				<span><strong>{{ job_offer.id ? 'UPDATE' : 'SAVE' }}</strong> NOW</span>
+			</button>
+		</div>
+</div>
+</form>
+
+<a href="{{ path('app_job_offer_index') }}">back to list</a>
+{% endblock %}

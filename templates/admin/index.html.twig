@@ -1,0 +1,116 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Admin index{% endblock %}
+
+{% block body %}
+<div style="height:100px"></div>
+<h1>Admin index</h1>
+
+<div id="lastClients" style="margin-top: 50px;">
+	<h2>Lasts 5 Clients of {{ clients|length }}</h2>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Society Name</th>
+				<th>Contact Name</th>
+				<th>Contact Email</th>
+				<th>Contact Phone</th>
+				<th>Creation Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for client in clients|slice(0,5) %}
+			<tr>
+				<td>{{ client.societyName }}</td>
+				<td>{{ client.contactName }}</td>
+				<td><a href="mailto:{{ client.contactEmail }}" target="_blank">{{ client.contactEmail }}</a></td>
+				<td>{{ client.contactNumber }}</td>
+				<td>{{ client.creationDate|date('Y-m-d') }}</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td colspan="2">no records found</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{path('app_client_index')}}"><button>See all clients</button></a>
+</div>
+
+<div id="lastCandidates" style="margin-top: 50px;">
+	<h2>Lasts 5 Candidates of {{ candidates|length }}</h2>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>City</th>
+				<th>Job Category</th>
+				<th>Availability</th>
+				<th>Inscription Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for candidate in candidates|slice(0,5) %}
+			<tr>
+				<td>{{ candidate.lastname ? candidate.lastname : '' }} {{ candidate.firstname ? candidate.firstname : '' }}</td>
+				<td><a href="mailto:{{ candidate.user.email ? candidate.user.email : '' }}" target="_blank">{{ candidate.user.email ? candidate.user.email : '' }}</a></td>
+				<td>{{ candidate.currentLocation ? candidate.currentLocation : '' }}</td>
+				<td>{{ candidate.jobCategoryId ? candidate.jobCategoryId.name : '' }}</td>
+				<td>{{ candidate.availability ? 'yes' : 'no' }}</td>
+				<td>{{ candidate.createdAt ? candidate.createdAt|date('Y-m-d') : '' }}</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td colspan="2">no records found</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{path('app_candidate_index')}}"><button>See all Candidates</button></a>
+</div>
+
+<div id="lastOffers" style="margin-top: 50px;">
+	<h2>Lasts 5 Offers of {{ jobs|length }}</h2>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Society</th>
+				<th>Contact Name</th>
+				<th>Contact Email</th>
+				<th>Contact Phone</th>
+				<th>Status</th>
+				<th>Creation Date</th>
+				<th>Closing Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for job in jobs|slice(0,5) %}
+			<tr>
+				<td>{{ job.title }}</td>
+				<td>{{ job.client.societyName }}</td>
+				<td>{{ job.client.contactName }}</td>
+				<td><a href="mailto:{{ job.client.contactEmail }}" target="_blank">{{ job.client.contactEmail }}</a></td>
+				<td>{{ job.client.contactNumber }}</td>
+				<td>{{ job.activity ? 'Active' : 'Inactive' }}</td>
+				<td>{{ job.creationDate|date('Y-m-d') }}</td>
+				<td>{{ job.closingDate|date('Y-m-d') }}</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td colspan="2">no records found</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{path('app_admin_job_offer_index')}}"><button>See all Offers</button></a>
+</div>
+
+{% endblock %}
