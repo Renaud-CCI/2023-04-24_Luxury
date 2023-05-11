@@ -403,8 +403,8 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 \t\t\t\t\t</a>
 
 \t\t\t\t\t<ul class=\"social-link tt-animate ltr mt-20\">
-\t\t\t\t\t\t\t<li><a href=\"#!\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a></li>
-\t\t\t\t\t\t\t<li><a href=\"#!\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a></li>
 \t\t\t\t\t</ul>
 
 \t\t\t\t\t<hr class=\"mt-10\">
@@ -413,7 +413,10 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 \t\t\t\t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t\t\t\t\t<div class=\"brand footer-brand\"></div>
 
-\t\t\t\t\t\t\t\t\t<span class=\"copy-text\">© 2019 All right reserved - by <a href=\"https://idmkr.io/\" target=\"_blank\">IDMKR</a> - <a href=\"#!\">Terms of use</a>
+\t\t\t\t\t\t\t\t\t<span class=\"copy-text\">© 2019 All right reserved - by <a href=\"https://idmkr.io/\" target=\"_blank\">IDMKR</a> - <a href=\"";
+        // line 285
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("terms_of_use");
+        echo "\">Terms of use</a>
 
 \t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t<div class=\"footer-intro\">
@@ -433,17 +436,26 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\" dropdown\">
-\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"/template/jobs/jobs.html\">
+\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"";
+        // line 305
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_job_offer_index");
+        echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<span>Jobs offers</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\" dropdown\">
-\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"/templates/compagny.html\">
+\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"";
+        // line 310
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_company");
+        echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<span>About us</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\" dropdown\">
-\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"/templates/contact.html\">
+\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"";
+        // line 315
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_contact");
+        echo "\">
 \t\t\t\t\t\t\t\t\t\t\t<span>Contact</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
@@ -563,7 +575,7 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 
     public function getDebugInfo()
     {
-        return array (  537 => 324,  519 => 262,  506 => 139,  496 => 138,  483 => 68,  473 => 67,  459 => 325,  457 => 324,  394 => 263,  392 => 262,  378 => 251,  369 => 245,  360 => 239,  349 => 230,  340 => 224,  337 => 223,  334 => 222,  326 => 217,  323 => 216,  320 => 215,  312 => 210,  309 => 209,  306 => 208,  298 => 203,  295 => 202,  287 => 197,  284 => 196,  282 => 195,  274 => 189,  268 => 187,  262 => 185,  259 => 184,  253 => 182,  250 => 181,  244 => 179,  242 => 178,  237 => 176,  233 => 175,  229 => 174,  223 => 170,  213 => 162,  211 => 161,  189 => 141,  187 => 138,  117 => 70,  115 => 67,  47 => 1,);
+        return array (  549 => 324,  531 => 262,  518 => 139,  508 => 138,  495 => 68,  485 => 67,  471 => 325,  469 => 324,  457 => 315,  449 => 310,  441 => 305,  418 => 285,  394 => 263,  392 => 262,  378 => 251,  369 => 245,  360 => 239,  349 => 230,  340 => 224,  337 => 223,  334 => 222,  326 => 217,  323 => 216,  320 => 215,  312 => 210,  309 => 209,  306 => 208,  298 => 203,  295 => 202,  287 => 197,  284 => 196,  282 => 195,  274 => 189,  268 => 187,  262 => 185,  259 => 184,  253 => 182,  250 => 181,  244 => 179,  242 => 178,  237 => 176,  233 => 175,  229 => 174,  223 => 170,  213 => 162,  211 => 161,  189 => 141,  187 => 138,  117 => 70,  115 => 67,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -842,8 +854,8 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 \t\t\t\t\t</a>
 
 \t\t\t\t\t<ul class=\"social-link tt-animate ltr mt-20\">
-\t\t\t\t\t\t\t<li><a href=\"#!\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a></li>
-\t\t\t\t\t\t\t<li><a href=\"#!\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\" target=\"_blank\"><i class=\"fa fa-facebook\"></i></a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\" target=\"_blank\"><i class=\"fa fa-linkedin\"></i></a></li>
 \t\t\t\t\t</ul>
 
 \t\t\t\t\t<hr class=\"mt-10\">
@@ -852,7 +864,7 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 \t\t\t\t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t\t\t\t\t<div class=\"brand footer-brand\"></div>
 
-\t\t\t\t\t\t\t\t\t<span class=\"copy-text\">© 2019 All right reserved - by <a href=\"https://idmkr.io/\" target=\"_blank\">IDMKR</a> - <a href=\"#!\">Terms of use</a>
+\t\t\t\t\t\t\t\t\t<span class=\"copy-text\">© 2019 All right reserved - by <a href=\"https://idmkr.io/\" target=\"_blank\">IDMKR</a> - <a href=\"{{ path('terms_of_use') }}\">Terms of use</a>
 
 \t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t<div class=\"footer-intro\">
@@ -872,17 +884,17 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\" dropdown\">
-\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"/template/jobs/jobs.html\">
+\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"{{path('app_job_offer_index')}}\">
 \t\t\t\t\t\t\t\t\t\t\t<span>Jobs offers</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\" dropdown\">
-\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"/templates/compagny.html\">
+\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"{{path('show_company')}}\">
 \t\t\t\t\t\t\t\t\t\t\t<span>About us</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\" dropdown\">
-\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"/templates/contact.html\">
+\t\t\t\t\t\t\t\t\t<a target=\"_self\" href=\"{{path('show_contact')}}\">
 \t\t\t\t\t\t\t\t\t\t\t<span>Contact</span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</li>
@@ -896,6 +908,6 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 
 \t</body>
 
-</html>", "base.html.twig", "/home/renaud/devilbox/data/www/2023-04-24_Luxury/templates/base.html.twig");
+</html>", "base.html.twig", "/shared/httpd/2023-04-24_Luxury/templates/base.html.twig");
     }
 }

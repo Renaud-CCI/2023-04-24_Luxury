@@ -50,8 +50,19 @@
                                 <li><span> Location </span>{{job.location}}</li>
                                 <li><span> Starting date </span>2018-05-18</li>
                             </ul>
-                            <a class="btn btn-block gradient primary mt-30 waves-effect waves-light" href="#!">Apply for this job</a>
-                            <div class="btn btn-block btn-success mt-30 waves-effect waves-light disabled">You have applied for this job</div>
+                            {% if allreadyApply < 1 %}
+                                {% if candidate %} 
+                                    {% if candidate.completeProfile %} 
+                                    <a class='btn btn-block gradient primary mt-30 waves-effect waves-light' href='{{ path('app_job_offer_applicationRegister', {'id': job.id}) }}'>Apply for this job</a>
+                                    {% else %}
+                                    <a class='btn btn-block gradient red mt-30 waves-effect waves-light' href='{{ path('app_candidate_new', {'id': app.user.id}) }}'>Complete your profile to apply</a>
+                                    {% endif %}
+                                {% endif %}
+                            {% else %}
+                                <div class="btn btn-block btn-success mt-30 waves-effect waves-light disabled">You have applied for this job</div>
+                            {% endif %}
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -59,23 +70,26 @@
                 <nav class="single-post-navigation no-margin" role="navigation">
                     <div class="row">
 
+                        {% if previousEntity %}
                         <div class="col-xs-6 col-sm-6 col-md-4">
                             <div class="previous-post-link">
-                                <a class="btn border primary waves-effect waves-dark" href="#!">
+                                <a class="btn border primary waves-effect waves-dark" href="{{ path('app_job_offer_show', {'id': previousEntity.id}) }}">
                                     <i class="fa fa-long-arrow-left"></i>Previous
                                 </a>
                             </div>
                         </div>
                         <div class="hidden-xs hidden-sm col-md-4"></div>
+                        {% endif %}
 
-
+                        {% if nextEntity %}
                         <div class="col-xs-6 col-sm-6 col-md-4">
                             <div class="next-post-link">
-                                <a class="btn border primary waves-effect waves-dark" href="#!">
+                                <a class="btn border primary waves-effect waves-dark" href="{{ path('app_job_offer_show', {'id': nextEntity.id}) }}">
                                     Next <i class="fa fa-long-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
+                        {% endif %}
 
                     </div>
                 </nav>

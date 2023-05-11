@@ -231,7 +231,10 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
                             <h3 class=\"white-text text-bold text-uppercase no-margin\">WE HAVE THE SOLUTION FOR YOU</h3>
                         </div>
                         <div class=\"promo-btn\">
-                            <a href=\"/templates/contact.html\"
+                            <a href=\"";
+        // line 151
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_contact");
+        echo "\"
                                 class=\"btn border secondary waves-effect waves-light\">Contact Us</a>
                         </div>
                     </div>
@@ -282,7 +285,10 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
                     </div>
 
                     <div class=\"text-center\">
-                        <a href=\"/templates/company.html\"
+                        <a href=\"";
+        // line 202
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_company");
+        echo "\"
                             class=\"btn gradient secondary waves-effect waves-light mt-40\">More about us</a>
                     </div>
                 </div>
@@ -311,7 +317,10 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
                                 is allowing our recruitment expertise and personal guidance to bring the best out in you
                                 by choosing the most suited position.</p>
 
-                            <a href=\"/templates/auth/register.html\"
+                            <a href=\"";
+        // line 231
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
+        echo "\"
                                 class=\"btn border secondary waves-effect waves-light mt-40\">Join us</a>
                         </div>
                     </div>
@@ -330,147 +339,89 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
 
                     <ul class=\"portfolio-filter brand-filter text-center\">
                         <li class=\"active waves-effect waves-light\" data-group=\"all\">All</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"commercial\">Commercial</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"retail\">Retail sales</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"creative\">Creative</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"technology\">Technology</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"marketing\">Marketing & PR</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"fashion\">Fashion & luxury</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"management\">Management & HR</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Commercial\">Commercial</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Retail sales\">Retail sales</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Creative\">Creative</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Technology\">Technology</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Marketing & PR\">Marketing & PR</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Fashion & luxury\">Fashion & luxury</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Management & HR\">Management & HR</li>
                     </ul>
                     <div class=\"portfolio portfolio-with-title col-2 gutter mt-30\">
+\t\t\t\t\t\t";
+        // line 259
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_slice($this->env, (isset($context["job_offers"]) || array_key_exists("job_offers", $context) ? $context["job_offers"] : (function () { throw new RuntimeError('Variable "job_offers" does not exist.', 259, $this->source); })()), 0, 5));
+        foreach ($context['_seq'] as $context["_key"] => $context["job"]) {
+            // line 260
+            echo "\t\t\t\t\t\t<div class=\"portfolio-item\" data-groups='[\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["job"], "jobCategory", [], "any", false, false, false, 260), "name", [], "any", false, false, false, 260), "html", null, true);
+            echo "\"]'>
+\t\t\t\t\t\t\t<div class=\"portfolio-wrapper\">
+\t\t\t\t\t\t\t\t<div class=\"card job-card\">
+\t\t\t\t\t\t\t\t\t<div class=\"card-content\">
+\t\t\t\t\t\t\t\t\t\t<span class=\"title\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"card-title\">";
+            // line 265
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "title", [], "any", false, false, false, 265), "html", null, true);
+            echo "</span>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"ref grey-text\">Ref. AA";
+            // line 266
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 266), "html", null, true);
+            echo "</span>
+\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t<div class=\"metas mb-20\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"material-icons\">&#xE53E;</i>";
+            // line 270
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "salary", [], "any", false, false, false, 270), "html", null, true);
+            echo "&euro;
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"material-icons\">&#xE916;</i>";
+            // line 273
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "closingDate", [], "any", false, false, false, 273), "Y-m-d"), "html", null, true);
+            echo "
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"material-icons\">&#xE55F;</i>";
+            // line 276
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "location", [], "any", false, false, false, 276), "html", null, true);
+            echo "
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<p class=\"truncate-text\">";
+            // line 279
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["job"], "description", [], "any", false, false, false, 279), "html", null, true);
+            echo "</p>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"card-action\">
+\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-md primary border waves-effect waves-dark\" href=\"";
+            // line 282
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_job_offer_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 282)]), "html", null, true);
+            echo "\">Details</a>
+\t\t\t\t\t\t\t\t\t\t";
+            // line 284
+            echo "\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 289
+        echo "
 
-                        <div class=\"portfolio-item\" data-groups='[\"all\", \"commercial\"]'>
-                            <div class=\"portfolio-wrapper\">
-                                <div class=\"card job-card\">
-                                    <div class=\"card-content\">
-                                        <span class=\"title\">
-                                            <span class=\"card-title\">2nd assistant position</span>
-                                            <span class=\"ref grey-text\">Ref. 1062</span>
-                                        </span>
-                                        <div class=\"metas mb-20\">
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class=\"truncate-text\">Nulla interdum, erat et mollis eleifend, urna turpis
-                                            pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim
-                                            ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class=\"card-action\">
-                                        <a class=\"btn btn-md primary border waves-effect waves-dark\"
-                                            href=\"/templates/jobs/show.html\">Details</a>
-                                        <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"portfolio-item\" data-groups='[\"all\", \"commercial\"]'>
-                            <div class=\"portfolio-wrapper\">
-                                <div class=\"card job-card\">
-                                    <div class=\"card-content\">
-                                        <span class=\"title\">
-                                            <span class=\"card-title\">2nd assistant position</span>
-                                            <span class=\"ref grey-text\">Ref. 1062</span>
-                                        </span>
-                                        <div class=\"metas mb-20\">
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class=\"truncate-text\">Nulla interdum, erat et mollis eleifend, urna turpis
-                                            pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim
-                                            ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class=\"card-action\">
-                                        <a class=\"btn btn-md primary border waves-effect waves-dark\"
-                                            href=\"/templates/jobs/show.html\">Details</a>
-                                        <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"portfolio-item\" data-groups='[\"all\", \"creative\"]'>
-                            <div class=\"portfolio-wrapper\">
-                                <div class=\"card job-card\">
-                                    <div class=\"card-content\">
-                                        <span class=\"title\">
-                                            <span class=\"card-title\">2nd assistant position</span>
-                                            <span class=\"ref grey-text\">Ref. 1062</span>
-                                        </span>
-                                        <div class=\"metas mb-20\">
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class=\"truncate-text\">Nulla interdum, erat et mollis eleifend, urna turpis
-                                            pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim
-                                            ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class=\"card-action\">
-                                        <a class=\"btn btn-md primary border waves-effect waves-dark\"
-                                            href=\"/templates/jobs/show.html\">Details</a>
-                                        <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"portfolio-item\" data-groups='[\"all\", \"commercial\"]'>
-                            <div class=\"portfolio-wrapper\">
-                                <div class=\"card job-card\">
-                                    <div class=\"card-content\">
-                                        <span class=\"title\">
-                                            <span class=\"card-title\">2nd assistant position</span>
-                                            <span class=\"ref grey-text\">Ref. 1062</span>
-                                        </span>
-                                        <div class=\"metas mb-20\">
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class=\"truncate-text\">Nulla interdum, erat et mollis eleifend, urna turpis
-                                            pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim
-                                            ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class=\"card-action\">
-                                        <a class=\"btn btn-md primary border waves-effect waves-dark\"
-                                            href=\"/templates/jobs/show.html\">Details</a>
-                                        <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class=\"no-item\"></div>
-
-                    </div>
+\t\t\t\t\t\t<div class=\"no-item\"></div>
+\t\t\t\t\t</div>
 
                     <div class=\"text-center\">
-                        <a href=\"/templates/jobs/index.html\"
+                        <a href=\"";
+        // line 295
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_job_offer_index");
+        echo "\"
                             class=\"btn gradient secondary waves-effect waves-light mt-30\">View all job offers</a>
                     </div>
                 </div>
@@ -482,9 +433,9 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
 </div>
 
 ";
-        // line 401
+        // line 306
         $this->displayBlock('js', $context, $blocks);
-        // line 468
+        // line 373
         echo "
 ";
         
@@ -495,7 +446,7 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
 
     }
 
-    // line 401
+    // line 306
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -505,7 +456,7 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "js"));
 
-        // line 402
+        // line 307
         echo "<!-- RS5.0 Init  -->
 <script type=\"text/javascript\">
     document.querySelector(\".rev_slider_wrapper\").setAttribute(\"style\",
@@ -592,7 +543,7 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
 
     public function getDebugInfo()
     {
-        return array (  509 => 402,  499 => 401,  488 => 468,  486 => 401,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  460 => 307,  450 => 306,  439 => 373,  437 => 306,  423 => 295,  415 => 289,  405 => 284,  401 => 282,  395 => 279,  389 => 276,  383 => 273,  377 => 270,  370 => 266,  366 => 265,  357 => 260,  353 => 259,  322 => 231,  290 => 202,  236 => 151,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -747,7 +698,7 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
                             <h3 class=\"white-text text-bold text-uppercase no-margin\">WE HAVE THE SOLUTION FOR YOU</h3>
                         </div>
                         <div class=\"promo-btn\">
-                            <a href=\"/templates/contact.html\"
+                            <a href=\"{{path('show_contact')}}\"
                                 class=\"btn border secondary waves-effect waves-light\">Contact Us</a>
                         </div>
                     </div>
@@ -798,7 +749,7 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
                     </div>
 
                     <div class=\"text-center\">
-                        <a href=\"/templates/company.html\"
+                        <a href=\"{{path('show_company')}}\"
                             class=\"btn gradient secondary waves-effect waves-light mt-40\">More about us</a>
                     </div>
                 </div>
@@ -827,7 +778,7 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
                                 is allowing our recruitment expertise and personal guidance to bring the best out in you
                                 by choosing the most suited position.</p>
 
-                            <a href=\"/templates/auth/register.html\"
+                            <a href=\"{{ path('register')}}\"
                                 class=\"btn border secondary waves-effect waves-light mt-40\">Join us</a>
                         </div>
                     </div>
@@ -846,147 +797,52 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
 
                     <ul class=\"portfolio-filter brand-filter text-center\">
                         <li class=\"active waves-effect waves-light\" data-group=\"all\">All</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"commercial\">Commercial</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"retail\">Retail sales</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"creative\">Creative</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"technology\">Technology</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"marketing\">Marketing & PR</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"fashion\">Fashion & luxury</li>
-                        <li class=\" waves-effect waves-light\" data-group=\"management\">Management & HR</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Commercial\">Commercial</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Retail sales\">Retail sales</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Creative\">Creative</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Technology\">Technology</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Marketing & PR\">Marketing & PR</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Fashion & luxury\">Fashion & luxury</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Management & HR\">Management & HR</li>
                     </ul>
                     <div class=\"portfolio portfolio-with-title col-2 gutter mt-30\">
+\t\t\t\t\t\t{% for job in job_offers|slice(0, 5) %}
+\t\t\t\t\t\t<div class=\"portfolio-item\" data-groups='[\"{{job.jobCategory.name}}\"]'>
+\t\t\t\t\t\t\t<div class=\"portfolio-wrapper\">
+\t\t\t\t\t\t\t\t<div class=\"card job-card\">
+\t\t\t\t\t\t\t\t\t<div class=\"card-content\">
+\t\t\t\t\t\t\t\t\t\t<span class=\"title\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"card-title\">{{ job.title }}</span>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"ref grey-text\">Ref. AA{{ job.id }}</span>
+\t\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t\t<div class=\"metas mb-20\">
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"material-icons\">&#xE53E;</i>{{ job.salary }}&euro;
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"material-icons\">&#xE916;</i>{{ job.closingDate|date('Y-m-d') }}
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t<div class=\"meta\">
+\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"material-icons\">&#xE55F;</i>{{ job.location }}
+\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t<p class=\"truncate-text\">{{ job.description }}</p>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"card-action\">
+\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-md primary border waves-effect waves-dark\" href=\"{{ path('app_job_offer_show', {'id': job.id}) }}\">Details</a>
+\t\t\t\t\t\t\t\t\t\t{# <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a> #}
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{% endfor %}
 
-                        <div class=\"portfolio-item\" data-groups='[\"all\", \"commercial\"]'>
-                            <div class=\"portfolio-wrapper\">
-                                <div class=\"card job-card\">
-                                    <div class=\"card-content\">
-                                        <span class=\"title\">
-                                            <span class=\"card-title\">2nd assistant position</span>
-                                            <span class=\"ref grey-text\">Ref. 1062</span>
-                                        </span>
-                                        <div class=\"metas mb-20\">
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class=\"truncate-text\">Nulla interdum, erat et mollis eleifend, urna turpis
-                                            pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim
-                                            ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class=\"card-action\">
-                                        <a class=\"btn btn-md primary border waves-effect waves-dark\"
-                                            href=\"/templates/jobs/show.html\">Details</a>
-                                        <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"portfolio-item\" data-groups='[\"all\", \"commercial\"]'>
-                            <div class=\"portfolio-wrapper\">
-                                <div class=\"card job-card\">
-                                    <div class=\"card-content\">
-                                        <span class=\"title\">
-                                            <span class=\"card-title\">2nd assistant position</span>
-                                            <span class=\"ref grey-text\">Ref. 1062</span>
-                                        </span>
-                                        <div class=\"metas mb-20\">
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class=\"truncate-text\">Nulla interdum, erat et mollis eleifend, urna turpis
-                                            pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim
-                                            ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class=\"card-action\">
-                                        <a class=\"btn btn-md primary border waves-effect waves-dark\"
-                                            href=\"/templates/jobs/show.html\">Details</a>
-                                        <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"portfolio-item\" data-groups='[\"all\", \"creative\"]'>
-                            <div class=\"portfolio-wrapper\">
-                                <div class=\"card job-card\">
-                                    <div class=\"card-content\">
-                                        <span class=\"title\">
-                                            <span class=\"card-title\">2nd assistant position</span>
-                                            <span class=\"ref grey-text\">Ref. 1062</span>
-                                        </span>
-                                        <div class=\"metas mb-20\">
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class=\"truncate-text\">Nulla interdum, erat et mollis eleifend, urna turpis
-                                            pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim
-                                            ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class=\"card-action\">
-                                        <a class=\"btn btn-md primary border waves-effect waves-dark\"
-                                            href=\"/templates/jobs/show.html\">Details</a>
-                                        <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=\"portfolio-item\" data-groups='[\"all\", \"commercial\"]'>
-                            <div class=\"portfolio-wrapper\">
-                                <div class=\"card job-card\">
-                                    <div class=\"card-content\">
-                                        <span class=\"title\">
-                                            <span class=\"card-title\">2nd assistant position</span>
-                                            <span class=\"ref grey-text\">Ref. 1062</span>
-                                        </span>
-                                        <div class=\"metas mb-20\">
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE53E;</i>45k&euro;
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE916;</i>2018-10-01
-                                            </div>
-                                            <div class=\"meta\">
-                                                <i class=\"material-icons\">&#xE55F;</i>Paris
-                                            </div>
-                                        </div>
-                                        <p class=\"truncate-text\">Nulla interdum, erat et mollis eleifend, urna turpis
-                                            pellentesque dolor, sed rhoncus erat est sit amet diam. Aliquam dignissim
-                                            ipsum nec lorem pulvinar.</p>
-                                    </div>
-                                    <div class=\"card-action\">
-                                        <a class=\"btn btn-md primary border waves-effect waves-dark\"
-                                            href=\"/templates/jobs/show.html\">Details</a>
-                                        <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class=\"no-item\"></div>
-
-                    </div>
+\t\t\t\t\t\t<div class=\"no-item\"></div>
+\t\t\t\t\t</div>
 
                     <div class=\"text-center\">
-                        <a href=\"/templates/jobs/index.html\"
+                        <a href=\"{{ path('app_job_offer_index') }}\"
                             class=\"btn gradient secondary waves-effect waves-light mt-30\">View all job offers</a>
                     </div>
                 </div>
@@ -1065,6 +921,6 @@ class __TwigTemplate_4855d1c1820ce5a7dcfb39a6a6a6bb63 extends Template
 </script>
 {% endblock %}
 
-{% endblock %}", "home/index.html.twig", "/home/renaud/devilbox/data/www/2023-04-24_Luxury/templates/home/index.html.twig");
+{% endblock %}", "home/index.html.twig", "/shared/httpd/2023-04-24_Luxury/templates/home/index.html.twig");
     }
 }

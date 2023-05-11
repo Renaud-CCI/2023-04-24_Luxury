@@ -88,6 +88,9 @@ class Candidate
     #[ORM\OneToMany(mappedBy: 'candidate_id', targetEntity: Application::class)]
     private Collection $applications;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $completeProfile = null;
+
     public function __construct()
     {
         $this->applications = new ArrayCollection();
@@ -405,6 +408,18 @@ class Candidate
                 $application->setCandidateId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCompleteProfile(): ?bool
+    {
+        return $this->completeProfile;
+    }
+
+    public function setCompleteProfile(?bool $completeProfile): self
+    {
+        $this->completeProfile = $completeProfile;
 
         return $this;
     }

@@ -1,0 +1,3 @@
+<?php //App%255CController%255CAdminController%2523job_application_delete
+
+return [PHP_INT_MAX, []];

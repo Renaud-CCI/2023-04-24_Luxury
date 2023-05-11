@@ -21,6 +21,16 @@ class Application
     #[ORM\JoinColumn(nullable: false)]
     private ?JobOffer $job_offer = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $created_at = null;
+
+    #[ORM\PrePersist]
+    public function __construct(JobOffer $jobOffer, Candidate $candidate)
+    {
+        $this->job_offer = $jobOffer;
+        $this->candidate_id = $candidate;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -48,5 +58,21 @@ class Application
         $this->job_offer = $job_offer;
 
         return $this;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $created_at): self
+    {
+        $this->created_at = $created_at;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        if (!$this->created_at) {
+            $this->setCreatedAt(new \DateTimeImmutable(date('Y-m-d H:i:s')));
+        }
+
+        return $this->created_at;
     }
 }

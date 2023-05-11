@@ -230,7 +230,10 @@ class __TwigTemplate_a3a5474f2637a90e4f3bd3f9f68f7957 extends Template
 
 \t\t\t\t\t\t\t<div class=\"checkbox\">
 \t\t\t\t\t\t\t\t<input type=\"checkbox\" name=\"accept-terms\" value=\"1\" id=\"accept-terms\" required />
-\t\t\t\t\t\t\t\t<label for=\"accept-terms\">I have read and I accept the <a href=\"#!\" target=\"_blank\">Terms Of
+\t\t\t\t\t\t\t\t<label for=\"accept-terms\">I have read and I accept the <a href=\"";
+        // line 109
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("terms_of_use");
+        echo "\" target=\"_blank\">Terms Of
 \t\t\t\t\t\t\t\t\t\tUse</a></label>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t
@@ -313,7 +316,7 @@ class __TwigTemplate_a3a5474f2637a90e4f3bd3f9f68f7957 extends Template
 
     public function getDebugInfo()
     {
-        return array (  289 => 133,  279 => 132,  266 => 140,  264 => 132,  248 => 119,  242 => 116,  227 => 103,  221 => 100,  218 => 99,  216 => 98,  209 => 94,  204 => 91,  197 => 82,  192 => 79,  186 => 76,  183 => 75,  181 => 74,  175 => 71,  167 => 66,  135 => 36,  125 => 35,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  292 => 133,  282 => 132,  269 => 140,  267 => 132,  251 => 119,  245 => 116,  235 => 109,  227 => 103,  221 => 100,  218 => 99,  216 => 98,  209 => 94,  204 => 91,  197 => 82,  192 => 79,  186 => 76,  183 => 75,  181 => 74,  175 => 71,  167 => 66,  135 => 36,  125 => 35,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -426,7 +429,7 @@ class __TwigTemplate_a3a5474f2637a90e4f3bd3f9f68f7957 extends Template
 
 \t\t\t\t\t\t\t<div class=\"checkbox\">
 \t\t\t\t\t\t\t\t<input type=\"checkbox\" name=\"accept-terms\" value=\"1\" id=\"accept-terms\" required />
-\t\t\t\t\t\t\t\t<label for=\"accept-terms\">I have read and I accept the <a href=\"#!\" target=\"_blank\">Terms Of
+\t\t\t\t\t\t\t\t<label for=\"accept-terms\">I have read and I accept the <a href=\"{{ path('terms_of_use') }}\" target=\"_blank\">Terms Of
 \t\t\t\t\t\t\t\t\t\tUse</a></label>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t
@@ -463,6 +466,6 @@ class __TwigTemplate_a3a5474f2637a90e4f3bd3f9f68f7957 extends Template
 {% endblock %}
 
 
-", "user/register.html.twig", "/home/renaud/devilbox/data/www/2023-04-24_Luxury/templates/user/register.html.twig");
+", "user/register.html.twig", "/shared/httpd/2023-04-24_Luxury/templates/user/register.html.twig");
     }
 }

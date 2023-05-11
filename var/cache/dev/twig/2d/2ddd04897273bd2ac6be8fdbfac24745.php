@@ -323,6 +323,89 @@ class __TwigTemplate_9e95577706a40cbdc5a636e525b8eda2 extends Template
         echo "\"><button>See all Offers</button></a>
 </div>
 
+<div id=\"lastApplications\" style=\"margin-top: 50px;\">
+\t<h2>Lasts 5 Applications of ";
+        // line 117
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["applications"]) || array_key_exists("applications", $context) ? $context["applications"] : (function () { throw new RuntimeError('Variable "applications" does not exist.', 117, $this->source); })())), "html", null, true);
+        echo "</h2>
+
+\t<table class=\"table\">
+\t\t<thead>
+\t\t\t<tr>
+\t\t\t\t<th>Candidate Name</th>
+\t\t\t\t<th>Candidate Email</th>
+\t\t\t\t<th>Offer Title</th>
+\t\t\t\t<th>Society Name</th>
+\t\t\t\t<th>Contact Name</th>
+\t\t\t\t<th>Contact Email</th>
+\t\t\t\t<th>Application Date</th>
+\t\t\t</tr>
+\t\t</thead>
+\t\t<tbody>
+\t\t\t";
+        // line 132
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_slice($this->env, (isset($context["applications"]) || array_key_exists("applications", $context) ? $context["applications"] : (function () { throw new RuntimeError('Variable "applications" does not exist.', 132, $this->source); })()), 0, 5));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["application"]) {
+            // line 133
+            echo "\t\t\t<tr>
+\t\t\t\t<td>";
+            // line 134
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["application"], "candidateId", [], "any", false, false, false, 134), "firstname", [], "any", false, false, false, 134), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["application"], "candidateId", [], "any", false, false, false, 134), "lastname", [], "any", false, false, false, 134), "html", null, true);
+            echo "</td>
+\t\t\t\t<td><a href=\"mailto:";
+            // line 135
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["application"], "candidateId", [], "any", false, false, false, 135), "user", [], "any", false, false, false, 135), "email", [], "any", false, false, false, 135), "html", null, true);
+            echo "\" target=\"_blank\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["application"], "candidateId", [], "any", false, false, false, 135), "user", [], "any", false, false, false, 135), "email", [], "any", false, false, false, 135), "html", null, true);
+            echo "</a></td>
+\t\t\t\t<td>";
+            // line 136
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["application"], "jobOffer", [], "any", false, false, false, 136), "title", [], "any", false, false, false, 136), "html", null, true);
+            echo "</td>
+\t\t\t\t<td>";
+            // line 137
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["application"], "jobOffer", [], "any", false, false, false, 137), "client", [], "any", false, false, false, 137), "societyName", [], "any", false, false, false, 137), "html", null, true);
+            echo "</td>
+\t\t\t\t<td>";
+            // line 138
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["application"], "jobOffer", [], "any", false, false, false, 138), "client", [], "any", false, false, false, 138), "contactName", [], "any", false, false, false, 138), "html", null, true);
+            echo "</td>
+\t\t\t\t<td>";
+            // line 139
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["application"], "jobOffer", [], "any", false, false, false, 139), "client", [], "any", false, false, false, 139), "contactEmail", [], "any", false, false, false, 139), "html", null, true);
+            echo "</td>
+\t\t\t\t<td>";
+            // line 140
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["application"], "createdAt", [], "any", false, false, false, 140), "Y-m-d"), "html", null, true);
+            echo "</td>
+\t\t\t</tr>
+\t\t\t";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 143
+            echo "\t\t\t<tr>
+\t\t\t\t<td colspan=\"2\">no records found</td>
+\t\t\t</tr>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['application'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 147
+        echo "\t\t</tbody>
+\t</table>
+
+\t<a href=\"";
+        // line 150
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin_job_applications_index");
+        echo "\"><button>See all Applications</button></a>
+</div>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -344,7 +427,7 @@ class __TwigTemplate_9e95577706a40cbdc5a636e525b8eda2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  322 => 113,  317 => 110,  308 => 106,  300 => 103,  296 => 102,  292 => 101,  288 => 100,  282 => 99,  278 => 98,  274 => 97,  270 => 96,  267 => 95,  262 => 94,  243 => 78,  236 => 74,  231 => 71,  222 => 67,  214 => 64,  210 => 63,  206 => 62,  202 => 61,  196 => 60,  190 => 59,  187 => 58,  182 => 57,  165 => 43,  158 => 39,  153 => 36,  144 => 32,  136 => 29,  132 => 28,  126 => 27,  122 => 26,  118 => 25,  115 => 24,  110 => 23,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  405 => 150,  400 => 147,  391 => 143,  383 => 140,  379 => 139,  375 => 138,  371 => 137,  367 => 136,  361 => 135,  355 => 134,  352 => 133,  347 => 132,  329 => 117,  322 => 113,  317 => 110,  308 => 106,  300 => 103,  296 => 102,  292 => 101,  288 => 100,  282 => 99,  278 => 98,  274 => 97,  270 => 96,  267 => 95,  262 => 94,  243 => 78,  236 => 74,  231 => 71,  222 => 67,  214 => 64,  210 => 63,  206 => 62,  202 => 61,  196 => 60,  190 => 59,  187 => 58,  182 => 57,  165 => 43,  158 => 39,  153 => 36,  144 => 32,  136 => 29,  132 => 28,  126 => 27,  122 => 26,  118 => 25,  115 => 24,  110 => 23,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -462,6 +545,43 @@ class __TwigTemplate_9e95577706a40cbdc5a636e525b8eda2 extends Template
 \t</table>
 
 \t<a href=\"{{path('app_admin_job_offer_index')}}\"><button>See all Offers</button></a>
+</div>
+
+<div id=\"lastApplications\" style=\"margin-top: 50px;\">
+\t<h2>Lasts 5 Applications of {{ applications|length }}</h2>
+
+\t<table class=\"table\">
+\t\t<thead>
+\t\t\t<tr>
+\t\t\t\t<th>Candidate Name</th>
+\t\t\t\t<th>Candidate Email</th>
+\t\t\t\t<th>Offer Title</th>
+\t\t\t\t<th>Society Name</th>
+\t\t\t\t<th>Contact Name</th>
+\t\t\t\t<th>Contact Email</th>
+\t\t\t\t<th>Application Date</th>
+\t\t\t</tr>
+\t\t</thead>
+\t\t<tbody>
+\t\t\t{% for application in applications|slice(0,5) %}
+\t\t\t<tr>
+\t\t\t\t<td>{{ application.candidateId.firstname }} {{ application.candidateId.lastname }}</td>
+\t\t\t\t<td><a href=\"mailto:{{ application.candidateId.user.email }}\" target=\"_blank\">{{ application.candidateId.user.email }}</a></td>
+\t\t\t\t<td>{{ application.jobOffer.title }}</td>
+\t\t\t\t<td>{{ application.jobOffer.client.societyName }}</td>
+\t\t\t\t<td>{{ application.jobOffer.client.contactName }}</td>
+\t\t\t\t<td>{{ application.jobOffer.client.contactEmail }}</td>
+\t\t\t\t<td>{{ application.createdAt|date('Y-m-d') }}</td>
+\t\t\t</tr>
+\t\t\t{% else %}
+\t\t\t<tr>
+\t\t\t\t<td colspan=\"2\">no records found</td>
+\t\t\t</tr>
+\t\t\t{% endfor %}
+\t\t</tbody>
+\t</table>
+
+\t<a href=\"{{path('app_admin_job_applications_index')}}\"><button>See all Applications</button></a>
 </div>
 
 {% endblock %}", "admin/index.html.twig", "/shared/httpd/2023-04-24_Luxury/templates/admin/index.html.twig");

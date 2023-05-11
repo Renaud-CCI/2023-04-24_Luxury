@@ -7,6 +7,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
+use App\Repository\JobOfferRepository;
 
 class HomeController extends AbstractController
 {
@@ -60,7 +61,7 @@ class HomeController extends AbstractController
     // }
 
     #[Route('/', name: 'app_home')]
-public function index(): Response
+public function index(JobOfferRepository $jobOfferRepository): Response
 {
     // Check if user is authenticated
     if ($this->getUser()) {
@@ -87,6 +88,7 @@ public function index(): Response
     // Render the homepage template
     return $this->render('home/index.html.twig', [
         'controller_name' => 'HomeController',
+        'job_offers' => $jobOfferRepository->findBy([], ['creation_date' => 'DESC']),
     ]);
 }
 
@@ -102,6 +104,14 @@ public function index(): Response
     public function company(): Response
     {
         return $this->render('home/company.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    #[Route('/terms', name: 'terms_of_use')]
+    public function terms(): Response
+    {
+        return $this->render('home/termsOfUse.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }

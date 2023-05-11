@@ -7578,10 +7578,11 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
-    <service id=".service_locator.9IwIY8n" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.IhLlOIq" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="adminRepository" type="service_closure" id="App\Repository\AdminRepository"/>
+        <argument key="applicationRepository" type="service_closure" id="App\Repository\ApplicationRepository"/>
         <argument key="candidateRepository" type="service_closure" id="App\Repository\CandidateRepository"/>
         <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
         <argument key="jobOfferRepository" type="service_closure" id="App\Repository\JobOfferRepository"/>
@@ -7592,6 +7593,19 @@
       <argument type="collection">
         <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
         <argument key="jobOfferRepository" type="service_closure" id="App\Repository\JobOfferRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.G4kCoBe" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="applicationRepository" type="service_closure" id="App\Repository\ApplicationRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.cHhMnL8" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="application" type="service_closure" id=".errored..service_locator.cHhMnL8.App\Entity\Application"/>
+        <argument key="applicationRepository" type="service_closure" id="App\Repository\ApplicationRepository"/>
       </argument>
     </service>
     <service id=".service_locator.mCbvPMW" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -7676,10 +7690,25 @@
         <argument key="jobOfferRepository" type="service_closure" id="App\Repository\JobOfferRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.7f85tW6" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.BRn2T3h" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="jobOffer" type="service_closure" id=".errored..service_locator.7f85tW6.App\Entity\JobOffer"/>
+        <argument key="applicationRepository" type="service_closure" id="App\Repository\ApplicationRepository"/>
+        <argument key="candidateRepository" type="service_closure" id="App\Repository\CandidateRepository"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="jobOffer" type="service_closure" id=".errored..service_locator.BRn2T3h.App\Entity\JobOffer"/>
+        <argument key="jobOfferRepository" type="service_closure" id="App\Repository\JobOfferRepository"/>
+        <argument key="tokenStorage" type="service_closure" id="security.token_storage"/>
+      </argument>
+    </service>
+    <service id=".service_locator.xHljLUO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="applicationRepository" type="service_closure" id="App\Repository\ApplicationRepository"/>
+        <argument key="candidateRepository" type="service_closure" id="App\Repository\CandidateRepository"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="jobOffer" type="service_closure" id=".errored..service_locator.xHljLUO.App\Entity\JobOffer"/>
+        <argument key="tokenStorage" type="service_closure" id="security.token_storage"/>
       </argument>
     </service>
     <service id=".service_locator.MqVvURB" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -7740,12 +7769,14 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.Yvs4.a2" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.zApAprA" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::delete" type="service_closure" id=".service_locator.WFfuDTG"/>
         <argument key="App\Controller\AdminController::edit" type="service_closure" id=".service_locator.WFfuDTG"/>
-        <argument key="App\Controller\AdminController::index" type="service_closure" id=".service_locator.9IwIY8n"/>
+        <argument key="App\Controller\AdminController::index" type="service_closure" id=".service_locator.IhLlOIq"/>
+        <argument key="App\Controller\AdminController::job_application_delete" type="service_closure" id=".service_locator.cHhMnL8"/>
+        <argument key="App\Controller\AdminController::job_applications_index" type="service_closure" id=".service_locator.G4kCoBe"/>
         <argument key="App\Controller\AdminController::job_offer_index" type="service_closure" id=".service_locator.pA6G5.l"/>
         <argument key="App\Controller\AdminController::show" type="service_closure" id=".service_locator.mCbvPMW"/>
         <argument key="App\Controller\CandidateController::delete" type="service_closure" id=".service_locator.Ua18XYo"/>
@@ -7759,10 +7790,12 @@
         <argument key="App\Controller\ClientController::new" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController::show" type="service_closure" id=".service_locator.lTbvCHw"/>
         <argument key="App\Controller\DashboardController::configureUserMenu" type="service_closure" id=".service_locator.t7nLwyX"/>
+        <argument key="App\Controller\HomeController::index" type="service_closure" id=".service_locator.nz7Yxh5"/>
+        <argument key="App\Controller\JobOfferController::applicationRegister" type="service_closure" id=".service_locator.xHljLUO"/>
         <argument key="App\Controller\JobOfferController::delete" type="service_closure" id=".service_locator.MqVvURB"/>
         <argument key="App\Controller\JobOfferController::edit" type="service_closure" id=".service_locator.Il.wMUe"/>
         <argument key="App\Controller\JobOfferController::index" type="service_closure" id=".service_locator.nz7Yxh5"/>
-        <argument key="App\Controller\JobOfferController::show" type="service_closure" id=".service_locator.7f85tW6"/>
+        <argument key="App\Controller\JobOfferController::show" type="service_closure" id=".service_locator.BRn2T3h"/>
         <argument key="App\Controller\UserController::delete" type="service_closure" id=".service_locator.yVvQ1jo"/>
         <argument key="App\Controller\UserController::edit" type="service_closure" id=".service_locator.yVvQ1jo"/>
         <argument key="App\Controller\UserController::forgottenPassword" type="service_closure" id=".service_locator.tyT5vEe"/>
@@ -7778,7 +7811,9 @@
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="App\Controller\AdminController:delete" type="service_closure" id=".service_locator.WFfuDTG"/>
         <argument key="App\Controller\AdminController:edit" type="service_closure" id=".service_locator.WFfuDTG"/>
-        <argument key="App\Controller\AdminController:index" type="service_closure" id=".service_locator.9IwIY8n"/>
+        <argument key="App\Controller\AdminController:index" type="service_closure" id=".service_locator.IhLlOIq"/>
+        <argument key="App\Controller\AdminController:job_application_delete" type="service_closure" id=".service_locator.cHhMnL8"/>
+        <argument key="App\Controller\AdminController:job_applications_index" type="service_closure" id=".service_locator.G4kCoBe"/>
         <argument key="App\Controller\AdminController:job_offer_index" type="service_closure" id=".service_locator.pA6G5.l"/>
         <argument key="App\Controller\AdminController:show" type="service_closure" id=".service_locator.mCbvPMW"/>
         <argument key="App\Controller\CandidateController:delete" type="service_closure" id=".service_locator.Ua18XYo"/>
@@ -7792,10 +7827,12 @@
         <argument key="App\Controller\ClientController:new" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController:show" type="service_closure" id=".service_locator.lTbvCHw"/>
         <argument key="App\Controller\DashboardController:configureUserMenu" type="service_closure" id=".service_locator.t7nLwyX"/>
+        <argument key="App\Controller\HomeController:index" type="service_closure" id=".service_locator.nz7Yxh5"/>
+        <argument key="App\Controller\JobOfferController:applicationRegister" type="service_closure" id=".service_locator.xHljLUO"/>
         <argument key="App\Controller\JobOfferController:delete" type="service_closure" id=".service_locator.MqVvURB"/>
         <argument key="App\Controller\JobOfferController:edit" type="service_closure" id=".service_locator.Il.wMUe"/>
         <argument key="App\Controller\JobOfferController:index" type="service_closure" id=".service_locator.nz7Yxh5"/>
-        <argument key="App\Controller\JobOfferController:show" type="service_closure" id=".service_locator.7f85tW6"/>
+        <argument key="App\Controller\JobOfferController:show" type="service_closure" id=".service_locator.BRn2T3h"/>
         <argument key="App\Controller\UserController:delete" type="service_closure" id=".service_locator.yVvQ1jo"/>
         <argument key="App\Controller\UserController:edit" type="service_closure" id=".service_locator.yVvQ1jo"/>
         <argument key="App\Controller\UserController:forgottenPassword" type="service_closure" id=".service_locator.tyT5vEe"/>
@@ -8740,12 +8777,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.Yvs4.a2"/>
+      <argument type="service" id=".service_locator.zApAprA"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.Yvs4.a2"/>
+      <argument type="service" id=".service_locator.zApAprA"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -8765,6 +8802,7 @@
       </call>
     </service>
     <service id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.cHhMnL8.App\Entity\Application" class="App\Entity\Application"/>
     <service id=".errored..service_locator.mCbvPMW.App\Entity\Admin" class="App\Entity\Admin"/>
     <service id=".errored..service_locator.WFfuDTG.App\Entity\Admin" class="App\Entity\Admin"/>
     <service id=".errored..service_locator.MpvB1I8.App\Entity\User" class="App\Entity\User"/>
@@ -8773,7 +8811,8 @@
     <service id=".errored..service_locator.lTbvCHw.App\Entity\Client" class="App\Entity\Client"/>
     <service id=".errored..service_locator.T1NedXT.App\Entity\Client" class="App\Entity\Client"/>
     <service id=".errored..service_locator.t7nLwyX.Symfony\Component\Security\Core\User\UserInterface" class="Symfony\Component\Security\Core\User\UserInterface"/>
-    <service id=".errored..service_locator.7f85tW6.App\Entity\JobOffer" class="App\Entity\JobOffer"/>
+    <service id=".errored..service_locator.BRn2T3h.App\Entity\JobOffer" class="App\Entity\JobOffer"/>
+    <service id=".errored..service_locator.xHljLUO.App\Entity\JobOffer" class="App\Entity\JobOffer"/>
     <service id=".errored..service_locator.MqVvURB.App\Entity\JobOffer" class="App\Entity\JobOffer"/>
     <service id=".errored..service_locator.Hz5btge.App\Entity\User" class="App\Entity\User"/>
     <service id=".errored..service_locator.yVvQ1jo.App\Entity\User" class="App\Entity\User"/>
@@ -9743,7 +9782,7 @@
     <service id="EasyCorp\Bundle\EasyAdminBundle\Menu\MenuItemMatcherInterface" alias="EasyCorp\Bundle\EasyAdminBundle\Menu\MenuItemMatcher"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Yvs4.a2"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.zApAprA"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9765,13 +9804,15 @@
     <service id=".service_locator.h8Jkkd2" alias="messenger.retry_strategy_locator"/>
     <service id=".service_locator.Mo0FXEU" alias="service_locator_EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
-    <service id=".service_locator.p66YSr0" alias=".service_locator.9IwIY8n"/>
+    <service id=".service_locator.8f4J6hP" alias=".service_locator.IhLlOIq"/>
     <service id=".service_locator.2vOwxxZ" alias=".service_locator.MpvB1I8"/>
     <service id=".service_locator.p092rqW" alias=".service_locator.MRhoQQb"/>
     <service id=".service_locator.l7d409k" alias=".service_locator.Il.wMUe"/>
+    <service id=".service_locator.EYwTDCW" alias=".service_locator.BRn2T3h"/>
+    <service id=".service_locator.E3l2Hks" alias=".service_locator.xHljLUO"/>
     <service id=".service_locator.6_Ar6bg" alias=".service_locator.tyT5vEe"/>
     <service id=".service_locator.KqoRol5" alias=".service_locator.GOeE_ve"/>
-    <service id=".service_locator.NghwSpD" alias=".service_locator.Yvs4.a2"/>
+    <service id=".service_locator.qWm3XYn" alias=".service_locator.zApAprA"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.za0Z_h0" alias=".service_locator.COy0ABv"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
@@ -9826,8 +9867,10 @@
     <service id="messenger.bus.default" alias="debug.traced.messenger.bus.default"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
-    <service id=".service_locator.7h6Z2IA" alias=".service_locator.9IwIY8n"/>
+    <service id=".service_locator.6XeglDu" alias=".service_locator.IhLlOIq"/>
     <service id=".service_locator.kMMrhU." alias=".service_locator.pA6G5.l"/>
+    <service id=".service_locator..psx.S_" alias=".service_locator.G4kCoBe"/>
+    <service id=".service_locator.veEleV3" alias=".service_locator.cHhMnL8"/>
     <service id=".service_locator.mEW3YX9" alias=".service_locator.mCbvPMW"/>
     <service id=".service_locator.f4nsw8m" alias=".service_locator.WFfuDTG"/>
     <service id=".service_locator.zoQRJEc" alias=".service_locator.ytEz899"/>
@@ -9840,7 +9883,8 @@
     <service id=".service_locator.uoBNKjJ" alias=".service_locator.t7nLwyX"/>
     <service id=".service_locator.Yf.zU80" alias=".service_locator.nz7Yxh5"/>
     <service id=".service_locator.CceVUUt" alias=".service_locator.Il.wMUe"/>
-    <service id=".service_locator.r81WLQf" alias=".service_locator.7f85tW6"/>
+    <service id=".service_locator.69QD1zK" alias=".service_locator.BRn2T3h"/>
+    <service id=".service_locator.tCzWAhP" alias=".service_locator.xHljLUO"/>
     <service id=".service_locator.wXpsbKm" alias=".service_locator.MqVvURB"/>
     <service id=".service_locator.Jb1Qj2T" alias=".service_locator.4iSUDsH"/>
     <service id=".service_locator.NJmKoVP" alias=".service_locator.tyT5vEe"/>

@@ -116,13 +116,13 @@ class __TwigTemplate_a4eac2f82445fd13a96588311e16634e extends Template
 
 \t\t\t\t\t<ul class=\"portfolio-filter brand-filter text-center\">
 \t\t\t\t\t\t<li class=\"active waves-effect waves-light\" data-group=\"all\">All</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"commercial\">Commercial</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"retail\">Retail sales</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"creative\">Creative</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"technology\">Technology</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"marketing\">Marketing & PR</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"fashion\">Fashion & luxury</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"management\">Management & HR</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Commercial\">Commercial</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Retail sales\">Retail sales</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Creative\">Creative</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Technology\">Technology</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Marketing & PR\">Marketing & PR</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Fashion & luxury\">Fashion & luxury</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Management & HR\">Management & HR</li>
 \t\t\t\t\t</ul>
 \t\t\t\t\t<div class=\"portfolio portfolio-with-title col-2 gutter mt-30\">
 \t\t\t\t\t\t";
@@ -177,8 +177,9 @@ class __TwigTemplate_a4eac2f82445fd13a96588311e16634e extends Template
             // line 68
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_job_offer_show", ["id" => twig_get_attribute($this->env, $this->source, $context["job"], "id", [], "any", false, false, false, 68)]), "html", null, true);
             echo "\">Details</a>
-\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
-\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t";
+            // line 70
+            echo "\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -280,7 +281,7 @@ class __TwigTemplate_a4eac2f82445fd13a96588311e16634e extends Template
 
     public function getDebugInfo()
     {
-        return array (  256 => 116,  246 => 115,  235 => 123,  233 => 115,  191 => 75,  178 => 68,  172 => 65,  166 => 62,  160 => 59,  154 => 56,  147 => 52,  143 => 51,  134 => 46,  130 => 45,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  257 => 116,  247 => 115,  236 => 123,  234 => 115,  192 => 75,  182 => 70,  178 => 68,  172 => 65,  166 => 62,  160 => 59,  154 => 56,  147 => 52,  143 => 51,  134 => 46,  130 => 45,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -320,13 +321,13 @@ class __TwigTemplate_a4eac2f82445fd13a96588311e16634e extends Template
 
 \t\t\t\t\t<ul class=\"portfolio-filter brand-filter text-center\">
 \t\t\t\t\t\t<li class=\"active waves-effect waves-light\" data-group=\"all\">All</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"commercial\">Commercial</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"retail\">Retail sales</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"creative\">Creative</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"technology\">Technology</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"marketing\">Marketing & PR</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"fashion\">Fashion & luxury</li>
-\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"management\">Management & HR</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Commercial\">Commercial</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Retail sales\">Retail sales</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Creative\">Creative</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Technology\">Technology</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Marketing & PR\">Marketing & PR</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Fashion & luxury\">Fashion & luxury</li>
+\t\t\t\t\t\t<li class=\" waves-effect waves-light\" data-group=\"Management & HR\">Management & HR</li>
 \t\t\t\t\t</ul>
 \t\t\t\t\t<div class=\"portfolio portfolio-with-title col-2 gutter mt-30\">
 \t\t\t\t\t\t{% for job in job_offers %}
@@ -353,7 +354,7 @@ class __TwigTemplate_a4eac2f82445fd13a96588311e16634e extends Template
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t<div class=\"card-action\">
 \t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-md primary border waves-effect waves-dark\" href=\"{{ path('app_job_offer_show', {'id': job.id}) }}\">Details</a>
-\t\t\t\t\t\t\t\t\t\t<a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a>
+\t\t\t\t\t\t\t\t\t\t{# <a class=\"btn btn-md primary waves-effect waves-light\" href=\"#!\">Apply</a> #}
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>

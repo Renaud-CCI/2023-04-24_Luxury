@@ -1,0 +1,47 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Applications index{% endblock %}
+
+{% block body %}
+<div style="height:100px"></div>
+    <h1>Applications index</h1>
+
+    <table class="table">
+        <thead>
+					<tr>
+						<th>Candidate Name</th>
+						<th>Candidate Email</th>
+						<th>Offer Title</th>
+						<th>Society Name</th>
+						<th>Contact Name</th>
+						<th>Contact Email</th>
+						<th>Application Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for application in applications %}
+					<tr>
+						<td>{{ application.candidateId.firstname }} {{ application.candidateId.lastname }}</td>
+						<td><a href="mailto:{{ application.candidateId.user.email }}" target="_blank">{{ application.candidateId.user.email }}</a></td>
+						<td>{{ application.jobOffer.title }}</td>
+						<td>{{ application.jobOffer.client.societyName }}</td>
+						<td>{{ application.jobOffer.client.contactName }}</td>
+						<td>{{ application.jobOffer.client.contactEmail }}</td>
+						<td>{{ application.createdAt|date('Y-m-d') }}</td>
+						<td>
+							{# <a href="{{ path('app_job_offer_show', {'id': job.id}) }}">show</a>
+							<a href="{{ path('app_job_offer_edit', {'id': job.id}) }}">edit</a> #}
+							<form method="post" action="{{ path('app_job_application_delete', {'id': application.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+								<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ application.id) }}">
+								<button class="btn">Delete</button>
+						</form>
+					</td>
+					</tr>
+					{% else %}
+					<tr>
+						<td colspan="2">no records found</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+    </table>
+{% endblock %}

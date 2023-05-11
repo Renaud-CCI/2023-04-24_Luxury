@@ -113,4 +113,41 @@
 	<a href="{{path('app_admin_job_offer_index')}}"><button>See all Offers</button></a>
 </div>
 
+<div id="lastApplications" style="margin-top: 50px;">
+	<h2>Lasts 5 Applications of {{ applications|length }}</h2>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Candidate Name</th>
+				<th>Candidate Email</th>
+				<th>Offer Title</th>
+				<th>Society Name</th>
+				<th>Contact Name</th>
+				<th>Contact Email</th>
+				<th>Application Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for application in applications|slice(0,5) %}
+			<tr>
+				<td>{{ application.candidateId.firstname }} {{ application.candidateId.lastname }}</td>
+				<td><a href="mailto:{{ application.candidateId.user.email }}" target="_blank">{{ application.candidateId.user.email }}</a></td>
+				<td>{{ application.jobOffer.title }}</td>
+				<td>{{ application.jobOffer.client.societyName }}</td>
+				<td>{{ application.jobOffer.client.contactName }}</td>
+				<td>{{ application.jobOffer.client.contactEmail }}</td>
+				<td>{{ application.createdAt|date('Y-m-d') }}</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td colspan="2">no records found</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{path('app_admin_job_applications_index')}}"><button>See all Applications</button></a>
+</div>
+
 {% endblock %}

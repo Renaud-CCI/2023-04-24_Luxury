@@ -129,7 +129,7 @@ class CandidateController extends AbstractController
 
         // Counting the number of currently filled columns
         $reflectionClass = new \ReflectionClass($candidate);
-        $nonNullCount = 0;
+        $nonNullCount = 1;
         foreach ($reflectionClass->getProperties() as $property) {
             $property->setAccessible(true);
             if ($property->getValue($candidate) !== null && $property->getValue($candidate) !== '') {
@@ -139,6 +139,14 @@ class CandidateController extends AbstractController
 
         // Calculating the percent of fullfill
         $percentage = ($nonNullCount / $columnCount) * 100;
+
+        if ($percentage >= 100){
+            $percentage = 100;
+            $candidate->setCompleteProfile(true);
+
+            $entityManager->persist($candidate);
+            $entityManager->flush();
+        }
 
 
         return $this->render('candidate/new.html.twig', [

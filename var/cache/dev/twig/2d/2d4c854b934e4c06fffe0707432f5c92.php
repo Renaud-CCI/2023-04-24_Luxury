@@ -163,7 +163,10 @@ class __TwigTemplate_7fcdfc0d377030bdcf2f486161628f54 extends Template
 \t\t\t\t\t\t\t\t\tyour business. It’s that end result you’re focused on – hiring a great team – and not the process to
 \t\t\t\t\t\t\t\t\tget there. This is where we can help...</p>
 
-\t\t\t\t\t\t\t\t<a href=\"/contact.html\"
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 83
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_contact");
+        echo "\"
 \t\t\t\t\t\t\t\t\tclass=\"btn btn-lg border secondary waves-effect waves-light mt-20\"><span><strong>Get in touch</strong>
 \t\t\t\t\t\t\t\t\t\twith us</span></a>
 \t\t\t\t\t\t\t</div>
@@ -308,7 +311,7 @@ class __TwigTemplate_7fcdfc0d377030bdcf2f486161628f54 extends Template
 
     public function getDebugInfo()
     {
-        return array (  282 => 175,  272 => 174,  261 => 184,  259 => 174,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  285 => 175,  275 => 174,  264 => 184,  262 => 174,  168 => 83,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -395,7 +398,7 @@ class __TwigTemplate_7fcdfc0d377030bdcf2f486161628f54 extends Template
 \t\t\t\t\t\t\t\t\tyour business. It’s that end result you’re focused on – hiring a great team – and not the process to
 \t\t\t\t\t\t\t\t\tget there. This is where we can help...</p>
 
-\t\t\t\t\t\t\t\t<a href=\"/contact.html\"
+\t\t\t\t\t\t\t\t<a href=\"{{path('show_contact')}}\"
 \t\t\t\t\t\t\t\t\tclass=\"btn btn-lg border secondary waves-effect waves-light mt-20\"><span><strong>Get in touch</strong>
 \t\t\t\t\t\t\t\t\t\twith us</span></a>
 \t\t\t\t\t\t\t</div>
@@ -505,6 +508,6 @@ class __TwigTemplate_7fcdfc0d377030bdcf2f486161628f54 extends Template
 
 
 
-", "home/company.html.twig", "/home/renaud/devilbox/data/www/2023-04-24_Luxury/templates/home/company.html.twig");
+", "home/company.html.twig", "/shared/httpd/2023-04-24_Luxury/templates/home/company.html.twig");
     }
 }
