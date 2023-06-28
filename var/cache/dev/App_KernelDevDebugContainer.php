@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerJN64tKX\App_KernelDevDebugContainer([
     'container.build_hash' => 'JN64tKX',
-    'container.build_id' => '827784de',
-    'container.build_time' => 1683806109,
+    'container.build_id' => 'a97e32e3',
+    'container.build_time' => 1684935338,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerJN64tKX');

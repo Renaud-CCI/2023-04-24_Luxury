@@ -155,7 +155,7 @@ class __TwigTemplate_76d37baf1104024be754a8f731e15c35 extends Template
 \t\t\t\t\t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t\t\t\t\t<div class=\"input-field\">
 \t\t\t\t\t\t\t\t\t\t<textarea class=\"materialize-textarea\" required=\"required\" name=\"message\" cols=\"50\"
-\t\t\t\t\t\t\t\t\t\t\trows=\"10\"></textarea>
+\t\t\t\t\t\t\t\t\t\t\trows=\"10\" placeholder=\"Les envoie de mails ne sont pas gérés dans ce TP. Merci d'utiliser le lien sur la droite ou dans le footer.\"></textarea>
 \t\t\t\t\t\t\t\t\t\t<label for=\"message\">Message</label>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -175,7 +175,7 @@ class __TwigTemplate_76d37baf1104024be754a8f731e15c35 extends Template
 \t\t\t\t\t\t\t<address>
 \t\t\t\t\t\t\t\t<i class=\"material-icons brand-color\">&#xE55F;</i>
 \t\t\t\t\t\t\t\t<div class=\"address\">
-\t\t\t\t\t\t\t\t\t<p>Luxury Services is based in Roanne, on Loire department</p>
+\t\t\t\t\t\t\t\t\t<p>Luxury Services is based in Testville, on Loire department</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<i class=\"material-icons brand-color\">&#xE61C;</i>
 \t\t\t\t\t\t\t\t<div class=\"phone\">
@@ -187,7 +187,7 @@ class __TwigTemplate_76d37baf1104024be754a8f731e15c35 extends Template
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<i class=\"material-icons brand-color\">&#xE0E1;</i>
 \t\t\t\t\t\t\t\t<div class=\"mail\">
-\t\t\t\t\t\t\t\t\t<p><a href=\"#!\">georges[a]luxuryservices.com</a></p>
+\t\t\t\t\t\t\t\t\t<p><a href=\"mailto:renaud.bresson@proton.me\">renaud.bresson</a></p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</address>
 \t\t\t\t\t\t</div>
@@ -334,7 +334,7 @@ class __TwigTemplate_76d37baf1104024be754a8f731e15c35 extends Template
 \t\t\t\t\t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t\t\t\t\t<div class=\"input-field\">
 \t\t\t\t\t\t\t\t\t\t<textarea class=\"materialize-textarea\" required=\"required\" name=\"message\" cols=\"50\"
-\t\t\t\t\t\t\t\t\t\t\trows=\"10\"></textarea>
+\t\t\t\t\t\t\t\t\t\t\trows=\"10\" placeholder=\"Les envoie de mails ne sont pas gérés dans ce TP. Merci d'utiliser le lien sur la droite ou dans le footer.\"></textarea>
 \t\t\t\t\t\t\t\t\t\t<label for=\"message\">Message</label>
 \t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
@@ -354,7 +354,7 @@ class __TwigTemplate_76d37baf1104024be754a8f731e15c35 extends Template
 \t\t\t\t\t\t\t<address>
 \t\t\t\t\t\t\t\t<i class=\"material-icons brand-color\">&#xE55F;</i>
 \t\t\t\t\t\t\t\t<div class=\"address\">
-\t\t\t\t\t\t\t\t\t<p>Luxury Services is based in Roanne, on Loire department</p>
+\t\t\t\t\t\t\t\t\t<p>Luxury Services is based in Testville, on Loire department</p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<i class=\"material-icons brand-color\">&#xE61C;</i>
 \t\t\t\t\t\t\t\t<div class=\"phone\">
@@ -366,7 +366,7 @@ class __TwigTemplate_76d37baf1104024be754a8f731e15c35 extends Template
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<i class=\"material-icons brand-color\">&#xE0E1;</i>
 \t\t\t\t\t\t\t\t<div class=\"mail\">
-\t\t\t\t\t\t\t\t\t<p><a href=\"#!\">georges[a]luxuryservices.com</a></p>
+\t\t\t\t\t\t\t\t\t<p><a href=\"mailto:renaud.bresson@proton.me\">renaud.bresson</a></p>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</address>
 \t\t\t\t\t\t</div>
@@ -394,6 +394,6 @@ class __TwigTemplate_76d37baf1104024be754a8f731e15c35 extends Template
 {% endblock %}
 
 
-", "home/contact.html.twig", "/home/renaud/devilbox/data/www/2023-04-24_Luxury/templates/home/contact.html.twig");
+", "home/contact.html.twig", "/shared/httpd/2023-04-24_Luxury/templates/home/contact.html.twig");
     }
 }

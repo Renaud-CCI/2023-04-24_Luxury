@@ -413,7 +413,7 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 \t\t\t\t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t\t\t\t\t<div class=\"brand footer-brand\"></div>
 
-\t\t\t\t\t\t\t\t\t<span class=\"copy-text\">© 2019 All right reserved - by <a href=\"https://idmkr.io/\" target=\"_blank\">IDMKR</a> - <a href=\"";
+\t\t\t\t\t\t\t\t\t<span class=\"copy-text\">© 2023 All right reserved - by <a href=\"https://renaud-bresson.github.io/\" target=\"_blank\">Renaud Bresson</a> - <a href=\"";
         // line 285
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("terms_of_use");
         echo "\">Terms of use</a>
@@ -864,7 +864,7 @@ class __TwigTemplate_ab5c5d88f9768201a5c67874f8b9f736 extends Template
 \t\t\t\t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t\t\t\t\t<div class=\"brand footer-brand\"></div>
 
-\t\t\t\t\t\t\t\t\t<span class=\"copy-text\">© 2019 All right reserved - by <a href=\"https://idmkr.io/\" target=\"_blank\">IDMKR</a> - <a href=\"{{ path('terms_of_use') }}\">Terms of use</a>
+\t\t\t\t\t\t\t\t\t<span class=\"copy-text\">© 2023 All right reserved - by <a href=\"https://renaud-bresson.github.io/\" target=\"_blank\">Renaud Bresson</a> - <a href=\"{{ path('terms_of_use') }}\">Terms of use</a>
 
 \t\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t\t\t<div class=\"footer-intro\">
